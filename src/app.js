@@ -37,8 +37,12 @@ startBtn.addEventListener("click", () => {
   if (music.paused) {
     music.play();
     changePlaying(currentMusic);
+    startBtn.classList.remove("fa-play-circle");
+    startBtn.classList.add("fa-pause-circle");
   } else {
     music.pause();
+    startBtn.classList.add("fa-play-circle");
+    startBtn.classList.remove("fa-pause-circle");
   }
 });
 
