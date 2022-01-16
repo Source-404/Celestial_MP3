@@ -4,24 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ThreeJS Starter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
   </head>
   <body>
     <div class="container">
-      <!-- <h1>Feel your music</h1> -->
-      <div class="pannel">
-        <p>Hello</p>
-        <button class="prev">Previous Music</button>
-        <button class="backward">-30</button>
-        <button class="start">Start</button>
-        <button class="pause">Pause</button>
-        <button class="forward">+30</button>
-        <button class="next">Next Music</button>
-        <br /><br />
-
-        <button class="voldown">volume down</button>
-        <span class="voltext">100 %</span>
-        <button class="volup">volume up</button>
-        <br /><br />
+      <div class="panel">
+        <div>
+          <i class="fas fa-step-backward prev"></i>
+          <i class="fas fa-backward backward"></i>
+          <i class="far fa-play-circle start"></i>
+          <i class="fas fa-forward forward"></i>
+          <i class="fas fa-step-forward next"></i>
+        </div>
+        
+        <div>
+          <i class="fas fa-minus-circle voldown"></i>
+          <span class="voltext">100%</span>
+          <i class="fas fa-plus-circle volup"></i>
+        </div>
 
         <div class="playing">Now Playing:</div>
 

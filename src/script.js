@@ -9,7 +9,7 @@ const textureLoader = new THREE.TextureLoader();
 const normalTexture = textureLoader.load("/textures/NormalMap.png");
 
 // Debug
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -98,7 +98,7 @@ function addStar() {
   scene.add(star);
 }
 
-Array(400).fill().forEach(addStar);
+Array(3000).fill().forEach(addStar);
 
 // Lights
 
@@ -116,12 +116,12 @@ pointLight2.intensity = 4;
 
 scene.add(pointLight2);
 
-const light1 = gui.addFolder("Light1");
+// const light1 = gui.addFolder("Light1");
 
-light1.add(pointLight2.position, "x").min(-6).max(6).step(0.02);
-light1.add(pointLight2.position, "y").min(-3).max(3).step(0.02);
-light1.add(pointLight2.position, "z").min(-3).max(3).step(0.02);
-light1.add(pointLight2, "intensity").min(0).max(10).step(0.02);
+// light1.add(pointLight2.position, "x").min(-6).max(6).step(0.02);
+// light1.add(pointLight2.position, "y").min(-3).max(3).step(0.02);
+// light1.add(pointLight2.position, "z").min(-3).max(3).step(0.02);
+// light1.add(pointLight2, "intensity").min(0).max(10).step(0.02);
 
 // const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1);
 // scene.add(pointLightHelper);
@@ -134,20 +134,20 @@ pointLight3.intensity = 4;
 
 scene.add(pointLight3);
 
-const light2 = gui.addFolder("Light2");
+// const light2 = gui.addFolder("Light2");
 
-light2.add(pointLight3.position, "x").min(-6).max(6).step(0.02);
-light2.add(pointLight3.position, "y").min(-3).max(3).step(0.02);
-light2.add(pointLight3.position, "z").min(-3).max(3).step(0.02);
-light2.add(pointLight3, "intensity").min(0).max(10).step(0.02);
+// light2.add(pointLight3.position, "x").min(-6).max(6).step(0.02);
+// light2.add(pointLight3.position, "y").min(-3).max(3).step(0.02);
+// light2.add(pointLight3.position, "z").min(-3).max(3).step(0.02);
+// light2.add(pointLight3, "intensity").min(0).max(10).step(0.02);
 
-const light2Color = {
-  color: 0xff0000,
-};
+// const light2Color = {
+//   color: 0xff0000,
+// };
 
-light2.addColor(light2Color, "color").onChange(() => {
-  pointLight3.color.set(light2Color.color);
-});
+// light2.addColor(light2Color, "color").onChange(() => {
+//   pointLight3.color.set(light2Color.color);
+// });
 
 // const pointLightHelper2 = new THREE.PointLightHelper(pointLight3, 1);
 // scene.add(pointLightHelper2);

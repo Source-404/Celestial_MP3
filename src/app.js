@@ -14,7 +14,7 @@ const songURL = [
 
 //buttons
 const startBtn = document.querySelector(".start");
-const pauseBtn = document.querySelector(".pause");
+// const pauseBtn = document.querySelector(".pause");
 const volupBtn = document.querySelector(".volup");
 const voldownBtn = document.querySelector(".voldown");
 const forwardBtn = document.querySelector(".forward");
@@ -34,12 +34,12 @@ const voltext = document.querySelector(".voltext");
 
 //button functionings
 startBtn.addEventListener("click", () => {
-  music.play();
-  changePlaying(currentMusic);
-});
-
-pauseBtn.addEventListener("click", () => {
-  music.pause();
+  if (music.paused) {
+    music.play();
+    changePlaying(currentMusic);
+  } else {
+    music.pause();
+  }
 });
 
 volupBtn.addEventListener("click", () => {
@@ -59,11 +59,11 @@ voldownBtn.addEventListener("click", () => {
 });
 
 forwardBtn.addEventListener("click", () => {
-  music.currentTime += 30;
+  music.currentTime += 20;
 });
 
 backwardBtn.addEventListener("click", () => {
-  music.currentTime -= 30;
+  music.currentTime -= 20;
 });
 
 nextBtn.addEventListener("click", () => {
@@ -100,8 +100,4 @@ const changePlaying = (currentMusic) => {
     .split("_")
     .join(" ")
     .toUpperCase();
-  // playing.innerHTML += songURL[currentMusic]
-  //   .split("_")[3]
-  //   .split(".")[0]
-  //   .toUpperCase();
 };

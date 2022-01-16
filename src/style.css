@@ -1,6 +1,12 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Capriola&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;500;600;700;800;900&family=Paytone+One&display=swap");
+
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -21,18 +27,31 @@ body {
   outline: none;
   mix-blend-mode: exclusion;
 }
-
 .container {
   height: 100vh;
   display: grid;
   place-items: center;
 }
+i {
+  font-size: 1.7rem;
+  margin: 0px 0.2rem;
+  /* color: #fafafa; */
+}
 
-.pannel {
-  height: 20vh;
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 17vh;
   width: 60vh;
-  background-color: white;
+  background-color: rgba(189, 189, 189, 0.356);
   margin-top: 40rem;
+  position: absolute;
+  bottom: 20px;
+  z-index: 69;
+  font-family: Paytone One;
+  border-radius: 15px;
 }
 h1 {
   font-size: 6rem;
