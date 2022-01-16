@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThreeJS Starter</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <h1>Feel your music</h1> -->
+      <div class="pannel">
+        <p>Hello</p>
+        <button class="prev">Previous Music</button>
+        <button class="backward">-30</button>
+        <button class="start">Start</button>
+        <button class="pause">Pause</button>
+        <button class="forward">+30</button>
+        <button class="next">Next Music</button>
+        <br /><br />
+
+        <button class="voldown">volume down</button>
+        <span class="voltext">100 %</span>
+        <button class="volup">volume up</button>
+        <br /><br />
+
+        <div class="playing">Now Playing:</div>
+
+        <audio class="music">
+          <source
+            class="musicSource"
+            src="https://datashat.net/music_for_programming_1-datassette.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+      </div>
+    </div>
+
+    <canvas class="webgl"></canvas>
+    <!-- <section></section> -->
+    <script src="app.js"></script>
+  </body>
+</html>
