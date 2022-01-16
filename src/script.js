@@ -6,7 +6,7 @@ import * as dat from "dat.gui";
 // Loading
 const textureLoader = new THREE.TextureLoader();
 
-const normalTexture = textureLoader.load("/textures/NormalMap.png");
+const normalTexture = textureLoader.load("./textures/NormalMap.png");
 
 // Debug
 // const gui = new dat.GUI();
@@ -38,7 +38,7 @@ scene.add(sphere);
 
 const loader = new THREE.FontLoader();
 
-loader.load("/fonts/RUBRIKA_Regular.json", function (font) {
+loader.load("./fonts/RUBRIKA_Regular.json", function (font) {
   const geometry = new THREE.TextGeometry("FEEL YOUR MUSIC", {
     font: font,
     size: 4,
